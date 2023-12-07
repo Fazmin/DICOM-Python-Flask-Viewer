@@ -1,0 +1,18 @@
+__pycache__/
+
+# tests and coverage
+*.pytest_cache
+
+# venv
+env
+venv
+
+# other
+.DS_Store
+
+_static
+_templates
+
+# javascript
+.vscode/symbols.json
+

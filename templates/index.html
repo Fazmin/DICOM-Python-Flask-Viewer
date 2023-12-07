@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DICOM Multi File Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>DICOM Multi File Viewer</h1>
+        <h2>Upload and View DICOM Files</h2>
+        <p>Upload DICOM files to view their contents and images.</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" multiple required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <div class="thumbnail-container">
+        </div>
+        <div class="main-image-container">
+            <img id="main-image" src="" style="width: 70%;">
+            <input type="range" id="zoom-slider" min="0.5" max="3" step="0.1" value="1">
+            <img id='gaussian' width=400></div>
+            <img id='mask' width=400></div>
+            <img id='painted'></div>
+            <div id='result'></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/image-js@0.35.5/lib/index.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
+

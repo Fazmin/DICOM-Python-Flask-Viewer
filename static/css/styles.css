@@ -1,0 +1,21 @@
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.thumbnail-container {
+    width: 30%;
+    float: left;
+}
+
+.main-image-container {
+    width: 70%;
+    float: right;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
